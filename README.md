@@ -1,50 +1,51 @@
-# PingCAP Talent Plan
+# Distributed Systems in Rust
 
-This is a series of training courses about writing distributed systems in Go and
-Rust. It is maintained by PingCAP for training and/or evaluating students, new
-employees, and new contributors to [TiDB] and [TiKV]. As such, the courses focus
-on subjects relevant to those projects. They are though appropriate for all Go
-and Rust programmers &mdash; they do not require any knowledge of or interest in
-either TiDB or TiKV.
+A training course about the distributed systems in [Rust].
 
-The courses primarily consist of projects (or "labs") where coding problems are
-presented, along with a partial implementation or API description, and a test
-suite.
+Subjects covered include:
 
-Each course is developed independently, so they vary in their presentation and
-their expectations from course-takers. See the individual course documentation
-for details.
+- [Raft consensus algorithm] (including a fault-tolerant key-value storage service
+using Raft)
+- [Percolator transaction model]
 
-[TiDB]: https://github.com/pingcap/tidb
-[TiKV]: https://github.com/tikv/tikv
+After completing this course you will have the knowledge to implement a basic
+key-value storage service with transaction and fault-tolerant in Rust.
 
+**Important note: Distributed Systems in Rust is in an alpha state**
+It might contain bugs. Any feedback is greatly appreciated. Please [file issues]
+if you have any problem. And also You are encouraged to fix problems on your own
+and submit pull requests.
 
-## Training courses
+## The goal of this course
 
-- **[Practical Networked Applications in Rust][rust]**. A series of projects
-  that incrementally develop a single Rust project from the ground up into a
-  high-performance, networked, parallel and asynchronous key/value store. Along
-  the way various real-world and practical Rust development subject matter are
-  explored and discussed.
+The goal of this course is to teach the Rust programmers who are interested in
+distributed systems to know about how to make the distributed systems reliable
+and how to implement the distributed transaction.
 
-- **[Distributed Systems in Rust][dss]**. Adapted from the [MIT 6.824]
-  distributed systems coursework, this course focuses on implementing important
-  distributed algorithms, including the [Raft] consensus algorithm, and the
-  [Percolator] distributed transaction protocol.
+## Who is this for?
 
-- **[Distributed Systems in Go][go]**. A course on implementing algorithms
-  necessary in distributed databases, including map reduce, and parallel query
-  optimization.
+Distributed Systems in Rust is for experienced _Rust_ programmers, who are
+familiar with the Rust language. If you are not, you can first learn our [rust]
+lessons.
 
-[rust]: ./rust/
-[dss]: ./dss/
-[go]: ./tidb/
+## A PingCAP-specific note
 
-[MIT 6.824]: http://nil.csail.mit.edu/6.824/2017/index.html
-[Raft]: https://raft.github.io/
-[Percolator]: https://storage.googleapis.com/pub-tools-public-publication-data/pdf/36726.pdf
+This course, combined with [Deep Dive TiKV], is intended to be enough to enable
+programmers to meaningfully contribute to [TiKV]. It is most specifically
+designed to teach those in the Chinese Rust community enough Rust to work on
+TiKV. The language used is intended to be simple so that those who read only a
+little English can follow. If you find any of the language difficult to
+understand please [file issues].
 
 ## License
 
-These courses may be freely used and modified for any purpose, under the terms
-of each course's individual license. See the courses for details.
+[CC-BY 4.0](https://opendefinition.org/licenses/cc-by/)
+
+<!-- links -->
+[rust]: ../rust/README.md
+[file issues]: https://github.com/pingcap/talent-plan/issues/
+[Deep Dive TiKV]: https://tikv.org/deep-dive/
+[TiKV]: https://github.com/tikv/tikv/
+[Rust]: https://www.rust-lang.org/
+[Raft consensus algorithm]: raft/README.md
+[Percolator transaction model]: percolator/README.md
